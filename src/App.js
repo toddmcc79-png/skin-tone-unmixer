@@ -1,3 +1,5 @@
+import Screen from "./Screen";
+import { screens } from "./screensConfig";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -20,7 +22,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Placeholder name="Welcome" />} />
+        <Route
+  path="/"
+  element={
+    <Screen
+      background={screens.welcome.background}
+      hotspots={screens.welcome.hotspots}
+    />
+  }
+/>
         <Route path="/path" element={<Placeholder name="Path Choice" />} />
 
         <Route path="/a/1" element={<Placeholder name="A – Screen 1" />} />

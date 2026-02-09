@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Screen.css";
+import "./screen.css";
 
 export default function Screen({ background, hotspots = [], children }) {
   const navigate = useNavigate();

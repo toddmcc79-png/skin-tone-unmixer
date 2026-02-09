@@ -11,6 +11,7 @@ export default function StarRating({ x, y, w, h }) {
   const handleRate = (value) => {
     setRating(value);
     localStorage.setItem("rating", value);
+    localStorage.setItem("ratedAt", Date.now());
   };
 
   return (

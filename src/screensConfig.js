@@ -11,9 +11,9 @@ export const screens = {
   path: {
     background: "/screens/path.png",
     hotspots: [
-      { id: "a", x: 5, y: 55, w: 25, h: 6, to: "/a/1" },
-      { id: "b", x: 30, y: 55, w: 25, h: 6, to: "/b/1" },
-      { id: "c", x: 60, y: 55, w: 25, h: 6, to: "/c/1" },
+      { id: "a", x: 5, y: 55, w: 28, h: 6, to: "/a/1" },
+      { id: "b", x: 40, y: 55, w: 28, h: 6, to: "/b/1" },
+      { id: "c", x: 75, y: 55, w: 28, h: 6, to: "/c/1" },
     ],
   },
 

@@ -132,6 +132,11 @@ function App() {
                   w: 80,
                   h: 12,
                   to: "/",
+                  onClick: () => {
+      localStorage.removeItem("path");
+      localStorage.removeItem("rating");
+      localStorage.removeItem("ratedAt");
+    },
                 },
               ]}
             >

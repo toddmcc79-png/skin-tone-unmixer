@@ -117,7 +117,7 @@ function App() {
           }
         />
 
-        {/* Done / Rating – placeholder for now */}
+        {/* Done / Rating (no stars yet) */}
         <Route
           path="/done"
           element={

@@ -1,51 +1,141 @@
-import Screen from "./Screen";
-import { screens } from "./screensConfig";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Temporary placeholders – we will replace these next
-const Placeholder = ({ name }) => (
-  <div
-    style={{
-      height: "100vh",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: 24,
-    }}
-  >
-    {name}
-  </div>
-);
+import Screen from "./Screen";
+import { screens } from "./screensConfig";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Welcome */}
         <Route
-  path="/"
-  element={
-    <Screen
-      background={screens.welcome.background}
-      hotspots={screens.welcome.hotspots}
-    />
-  }
-/>
-        <Route path="/path" element={<Placeholder name="Path Choice" />} />
+          path="/"
+          element={
+            <Screen
+              background={screens.welcome.background}
+              hotspots={screens.welcome.hotspots}
+            />
+          }
+        />
 
-        <Route path="/a/1" element={<Placeholder name="A – Screen 1" />} />
-        <Route path="/a/2" element={<Placeholder name="A – Screen 2" />} />
-        <Route path="/a/3" element={<Placeholder name="A – Screen 3" />} />
+        {/* Path choice */}
+        <Route
+          path="/path"
+          element={
+            <Screen
+              background={screens.path.background}
+              hotspots={screens.path.hotspots}
+            />
+          }
+        />
 
-        <Route path="/b/1" element={<Placeholder name="B – Screen 1" />} />
-        <Route path="/b/2" element={<Placeholder name="B – Screen 2" />} />
-        <Route path="/b/3" element={<Placeholder name="B – Screen 3" />} />
+        {/* Path A */}
+        <Route
+          path="/a/1"
+          element={
+            <Screen
+              background={screens.a1.background}
+              hotspots={screens.a1.hotspots}
+            />
+          }
+        />
+        <Route
+          path="/a/2"
+          element={
+            <Screen
+              background={screens.a2.background}
+              hotspots={screens.a2.hotspots}
+            />
+          }
+        />
+        <Route
+          path="/a/3"
+          element={
+            <Screen
+              background={screens.a3.background}
+              hotspots={screens.a3.hotspots}
+            />
+          }
+        />
 
-        <Route path="/c/1" element={<Placeholder name="C – Screen 1" />} />
-        <Route path="/c/2" element={<Placeholder name="C – Screen 2" />} />
-        <Route path="/c/3" element={<Placeholder name="C – Screen 3" />} />
+        {/* Path B */}
+        <Route
+          path="/b/1"
+          element={
+            <Screen
+              background={screens.b1.background}
+              hotspots={screens.b1.hotspots}
+            />
+          }
+        />
+        <Route
+          path="/b/2"
+          element={
+            <Screen
+              background={screens.b2.background}
+              hotspots={screens.b2.hotspots}
+            />
+          }
+        />
+        <Route
+          path="/b/3"
+          element={
+            <Screen
+              background={screens.b3.background}
+              hotspots={screens.b3.hotspots}
+            />
+          }
+        />
 
-        <Route path="/done" element={<Placeholder name="Done / Rating" />} />
+        {/* Path C */}
+        <Route
+          path="/c/1"
+          element={
+            <Screen
+              background={screens.c1.background}
+              hotspots={screens.c1.hotspots}
+            />
+          }
+        />
+        <Route
+          path="/c/2"
+          element={
+            <Screen
+              background={screens.c2.background}
+              hotspots={screens.c2.hotspots}
+            />
+          }
+        />
+        <Route
+          path="/c/3"
+          element={
+            <Screen
+              background={screens.c3.background}
+              hotspots={screens.c3.hotspots}
+            />
+          }
+        />
+
+        {/* Done / Rating – placeholder for now */}
+        <Route
+          path="/done"
+          element={
+            <Screen
+              background="/screens/done.png"
+              hotspots={[
+                {
+                  id: "restart",
+                  x: 10,
+                  y: 75,
+                  w: 80,
+                  h: 12,
+                  to: "/",
+                },
+              ]}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

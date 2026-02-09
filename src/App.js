@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Screen from "./Screen";
+import StarRating from "./StarRating";
 import { screens } from "./screensConfig";
 
 function App() {
@@ -117,7 +118,7 @@ function App() {
           }
         />
 
-        {/* Done / Rating (no stars yet) */}
+        {/* Done / Rating */}
         <Route
           path="/done"
           element={
@@ -133,7 +134,14 @@ function App() {
                   to: "/",
                 },
               ]}
-            />
+            >
+              <StarRating
+                x={15}
+                y={55}
+                w={70}
+                h={10}
+              />
+            </Screen>
           }
         />
       </Routes>

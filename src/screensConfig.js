@@ -11,9 +11,33 @@ export const screens = {
   path: {
     background: "/screens/path.png",
     hotspots: [
-      { id: "a", x: 5, y: 36, w: 28, h: 25, to: "/a/1" },
-      { id: "b", x: 36.5, y: 36, w: 28, h: 25, to: "/b/1" },
-      { id: "c", x: 67.25, y: 36, w: 28, h: 25, to: "/c/1" },
+      {
+        id: "a",
+        x: 5,
+        y: 36,
+        w: 28,
+        h: 25,
+        to: "/a/1",
+        onClick: () => localStorage.setItem("path", "A"),
+      },
+      {
+        id: "b",
+        x: 36.5,
+        y: 36,
+        w: 28,
+        h: 25,
+        to: "/b/1",
+        onClick: () => localStorage.setItem("path", "B"),
+      },
+      {
+        id: "c",
+        x: 67.25,
+        y: 36,
+        w: 28,
+        h: 25,
+        to: "/c/1",
+        onClick: () => localStorage.setItem("path", "C"),
+      },
     ],
   },
 
